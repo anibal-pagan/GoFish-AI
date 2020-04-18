@@ -25,7 +25,25 @@ public class Card {
 
     @Override
     public String toString(){
-        return suit + " "+ number;
+        char num;
+        switch(number) {
+            case 11:
+                num = 'J';
+                break;
+            case 12:
+                num = 'Q';
+                break;
+            case 13:
+                num = 'K';
+                break;
+            case 1:
+                num = 'A';
+                break;
+            default:
+                num = (char) number; //this doesn't work
+        }
+        if(number > 10) return suit + " " + num;
+        else   return suit + " " + number;
     }
 
 }

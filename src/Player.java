@@ -40,7 +40,7 @@ public class Player {
     public void displayCardsInHand() {
         for(int i=0; i<myCards.size(); i++) {
             int num = i+1;
-            System.out.println(num + ") "+ myCards.toString());
+            System.out.println(num + ") "+ myCards.get(i).toString());
         }
     }
 
@@ -52,6 +52,7 @@ public class Player {
             if (c.getNumber() == cardNum) {
                 cardsToRemove.add(c);
                 p.giveCard(c);
+                cardsGiven++;
             }
         }
         for(Card c : cardsToRemove) {
@@ -60,5 +61,8 @@ public class Player {
         return cardsGiven;
     }
 
+    public int cardCount() {
+        return myCards.size();
+    }
 
 }
