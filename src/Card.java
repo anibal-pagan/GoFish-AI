@@ -14,7 +14,7 @@ public class Card {
     }
 
     public int getNumber(){
-        return this.getNumber();
+        return this.number;
     }
 
     @Override
