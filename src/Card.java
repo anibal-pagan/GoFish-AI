@@ -1,5 +1,3 @@
-import jdk.nashorn.internal.ir.ReturnNode;
-
 public class Card {
 
     private String suit;
@@ -16,11 +14,18 @@ public class Card {
     }
 
     public int getNumber(){
-        return this.getNumber();
+        return this.number;
     }
 
-    public void printCard(){
-        System.out.println(suit + " "+ number);
+    @Override
+    public boolean equals(Object obj) {
+        Card c = (Card) obj;
+        return (this.getSuit().equals(c.getSuit()) && this.getNumber() == c.getNumber());
+    }
+
+    @Override
+    public String toString(){
+        return suit + " "+ number;
     }
 
 }
