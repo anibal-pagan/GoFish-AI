@@ -1,5 +1,3 @@
-import jdk.nashorn.internal.ir.ReturnNode;
-
 public class Card {
 
     private String suit;
