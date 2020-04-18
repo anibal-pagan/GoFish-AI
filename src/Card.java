@@ -17,8 +17,15 @@ public class Card {
         return this.getNumber();
     }
 
-    public void printCard(){
-        System.out.println(suit + " "+ number);
+    @Override
+    public boolean equals(Object obj) {
+        Card c = (Card) obj;
+        return (this.getSuit().equals(c.getSuit()) && this.getNumber() == c.getNumber());
+    }
+
+    @Override
+    public String toString(){
+        return suit + " "+ number;
     }
 
 }

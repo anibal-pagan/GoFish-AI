@@ -47,7 +47,6 @@ public class Deck {
         for(int i=0; i<5; i++){
             Card c= getRandomCard();
             player.giveCard(c);
-            c.printCard();
         }
     }
 
