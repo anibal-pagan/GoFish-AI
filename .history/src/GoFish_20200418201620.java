@@ -47,15 +47,17 @@ public class GoFish {
             int indexToTakeFrom = scan.nextInt() - 1;
 
             
+
+            //Choose number to ask
+            
+
+            //check if player can ask for that card
             int numToTake=-1;
             boolean asking =true;
             while(asking){
-
-                 //Choose number to ask
                 System.out.println("Which card do you want to ask for? (J = 11, Q = 12, K = 13, A = 1)");
                 numToTake  = scan.nextInt();
 
-            //check if player can ask for that card
             if(!players.get(turn).hasCard(numToTake)){
                 System.out.println("You can only ask for cards you have. Try again.");
             }else{

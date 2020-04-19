@@ -46,23 +46,23 @@ public class GoFish {
             //Choose Player to take from, handle errors later
             int indexToTakeFrom = scan.nextInt() - 1;
 
-            
-            int numToTake=-1;
-            boolean asking =true;
+            boolean asking = true;
+            int numToTake =-1;
             while(asking){
 
-                 //Choose number to ask
-                System.out.println("Which card do you want to ask for? (J = 11, Q = 12, K = 13, A = 1)");
-                numToTake  = scan.nextInt();
+            //Choose number to ask
+            System.out.println("Which card do you want to ask for? (J = 11, Q = 12, K = 13, A = 1)");
+            numToTake = scan.nextInt();
 
             //check if player can ask for that card
-            if(!players.get(turn).hasCard(numToTake)){
+            if(!players.get(indexToTakeFrom).hasCard(numToTake)){
                 System.out.println("You can only ask for cards you have. Try again.");
             }else{
-                asking=false;
-            } 
+            asking=false;
             }
-            
+
+        }
+        }
 
             //Check if player has card(s) with that number or not
             int cardsGiven = players.get(indexToTakeFrom).giveCards(numToTake, players.get(turn));

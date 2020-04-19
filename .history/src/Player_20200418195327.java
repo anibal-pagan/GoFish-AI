@@ -63,7 +63,6 @@ public class Player {
 
     public boolean hasCard(int cardNum){
         for(int i=0;i<this.myCards.size();i++){
-            System.out.println(cardNum+" == "+ this.myCards.get(i).getNumber());
             if(cardNum==this.myCards.get(i).getNumber())
                 return true;
         }
