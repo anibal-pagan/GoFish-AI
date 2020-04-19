@@ -46,16 +46,9 @@ public class GoFish {
 
             System.out.print("\n");
             indexToTakeFrom = scan.nextInt() - 1;
-            System.out.println("indextotakefrom "+indexToTakeFrom);
-            System.out.println("size "+players.size());
-            
-            if(indexToTakeFrom<0 || indexToTakeFrom> players.size()-1 ){
+            if(indexToTakeFrom+1!=turn || indexToTakeFrom<0 || indexToTakeFrom> players.size() )
                 System.out.println("There are only " + (players.size()-1)+" players. Try again.");
-            }
-             else if(indexToTakeFrom==turn){
-                System.out.println("You can't ask yourself. Try again.");
-            
-            }else{
+                else{
                     choosing=false;
                 }
 
